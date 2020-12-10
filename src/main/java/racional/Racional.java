@@ -29,7 +29,21 @@ public class Racional {
     public int getDenominador() {
         return denominador;
     }
-    
-    
+
+    public void setNumerador(int numerador) {
+        this.numerador = numerador;
+    }
+
+    public void setDenominador(int denominador) {
+        if (denominador != 0) {
+            this.denominador = denominador;
+        } else {
+            this.denominador = 1;
+        }
+    }
+
+    public void imprimirConsola() {
+        System.out.println("El racional es: " + numerador + "/" + denominador);
+    }
 
 }
