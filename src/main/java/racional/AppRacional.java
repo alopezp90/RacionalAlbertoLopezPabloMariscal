@@ -15,5 +15,6 @@ public class AppRacional {
         k.setNumerador(3);
         k.setDenominador(4);
 
+        Racional aleatorio = Racional.aleatorio();
     }
 }

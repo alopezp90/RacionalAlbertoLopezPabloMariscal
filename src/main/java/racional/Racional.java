@@ -93,7 +93,7 @@ public class Racional {
         }
     }
 
-    public Racional aleatorio() {
+    public static Racional aleatorio() {
         Random rd = new Random();
         Racional aleatorio = new Racional();
 
