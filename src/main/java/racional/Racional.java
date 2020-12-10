@@ -82,4 +82,12 @@ public class Racional {
             return new Racional();
         }
     }
+
+    public boolean igualdad(Racional racional1, Racional racional2) {
+        if (racional1.getNumerador() * racional2.getDenominador() == racional2.getNumerador() * racional1.getDenominador()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
