@@ -70,4 +70,8 @@ public class Racional {
         }
         return new Racional (this.numerador, this.denominador);
     }
+    
+    public Racional producto(Racional racional){
+        return new Racional (this.numerador * racional.getNumerador(), this.denominador * racional.getDenominador());
+    }
 }
