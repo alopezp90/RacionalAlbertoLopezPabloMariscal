@@ -60,4 +60,14 @@ public class Racional {
         }
         return new Racional (this.numerador, this.denominador);
     }
+    
+    public Racional resta(Racional racional) {
+        if (this.denominador == racional.getDenominador()){
+            this.numerador -= racional.getNumerador();
+        }else{
+            this.numerador = (this.numerador * racional.getDenominador()) - (this.denominador * racional.getNumerador());
+            this.denominador *= racional.getDenominador();
+        }
+        return new Racional (this.numerador, this.denominador);
+    }
 }
