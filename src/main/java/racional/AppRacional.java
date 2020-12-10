@@ -22,5 +22,8 @@ public class AppRacional {
         System.out.printf("aleatorio = %.2f \n", (double)aleatorio.getNumerador() / aleatorio.getDenominador());
         
         System.out.println("¿Son iguales z y k? " + Racional.igualdad(z,k));
+        
+        System.out.println("Sumamos z y k: ");
+        (z.suma(k)).imprimirConsola();
     }
 }
