@@ -20,5 +20,7 @@ public class AppRacional {
         System.out.printf("z = %.2f \n", (double)z.getNumerador() / z.getDenominador());
         System.out.printf("k = %.2f \n", (double)k.getNumerador() / k.getDenominador());
         System.out.printf("aleatorio = %.2f \n", (double)aleatorio.getNumerador() / aleatorio.getDenominador());
+        
+        System.out.println("¿Son iguales z y k? " + Racional.igualdad(z,k));
     }
 }
