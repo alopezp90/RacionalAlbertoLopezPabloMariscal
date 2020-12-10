@@ -52,26 +52,34 @@ public class Racional {
     }
 
     public Racional suma(Racional racional) {
-        if (this.denominador == racional.getDenominador()){
+        if (this.denominador == racional.getDenominador()) {
             this.numerador += racional.getNumerador();
-        }else{
+        } else {
             this.numerador = (this.numerador * racional.getDenominador()) + (this.denominador * racional.getNumerador());
             this.denominador *= racional.getDenominador();
         }
-        return new Racional (this.numerador, this.denominador);
+        return new Racional(this.numerador, this.denominador);
     }
-    
+
     public Racional resta(Racional racional) {
-        if (this.denominador == racional.getDenominador()){
+        if (this.denominador == racional.getDenominador()) {
             this.numerador -= racional.getNumerador();
-        }else{
+        } else {
             this.numerador = (this.numerador * racional.getDenominador()) - (this.denominador * racional.getNumerador());
             this.denominador *= racional.getDenominador();
         }
-        return new Racional (this.numerador, this.denominador);
+        return new Racional(this.numerador, this.denominador);
     }
-    
-    public Racional producto(Racional racional){
-        return new Racional (this.numerador * racional.getNumerador(), this.denominador * racional.getDenominador());
+
+    public Racional producto(Racional racional) {
+        return new Racional(this.numerador * racional.getNumerador(), this.denominador * racional.getDenominador());
+    }
+
+    public Racional division(Racional racional) {
+        if (racional.getNumerador() != 0) {
+            return new Racional(this.numerador / racional.getDenominador(), this.denominador / racional.getNumerador());
+        } else {
+            return new Racional();
+        }
     }
 }
