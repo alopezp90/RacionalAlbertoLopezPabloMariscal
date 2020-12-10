@@ -4,6 +4,8 @@ package racional;
  * @author Alberto López Puertas
  * <alopezp90@gmail.com>
  */
+import java.util.Random;
+
 public class Racional {
 
     private int numerador, denominador;
@@ -89,5 +91,17 @@ public class Racional {
         } else {
             return false;
         }
+    }
+
+    public Racional aleatorio() {
+        Random rd = new Random();
+        Racional aleatorio = new Racional();
+
+        aleatorio.setNumerador(rd.nextInt());
+        do {
+            aleatorio.setDenominador(rd.nextInt());
+        } while (aleatorio.getDenominador() == 0);
+
+        return aleatorio;
     }
 }
