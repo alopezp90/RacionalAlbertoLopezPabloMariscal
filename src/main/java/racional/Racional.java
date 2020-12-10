@@ -46,4 +46,18 @@ public class Racional {
         System.out.println("El racional es: " + numerador + "/" + denominador);
     }
 
+    @Override
+    public String toString() {
+        return numerador + "/" + denominador;
+    }
+
+    public Racional suma(Racional racional) {
+        if (this.denominador == racional.getDenominador()){
+            this.numerador += racional.getNumerador();
+        }else{
+            this.numerador = (this.numerador * racional.getDenominador()) + (this.denominador * racional.getNumerador());
+            this.denominador *= racional.getDenominador();
+        }
+        return new Racional (this.numerador, this.denominador);
+    }
 }
